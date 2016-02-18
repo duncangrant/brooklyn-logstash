@@ -56,4 +56,4 @@ brooklyn.catalog:
       brooklyn.config:
         logstash.config.input: $brooklyn:formatString("input { file { path => \"%s\" start_position => \"beginning\" } }", $brooklyn:parent().attributeWhenReady("log.location"))
         logstash.elasticsearch.host: 127.0.0.1:9200  # must be supplied by caller!
-        logstash.config.output: $brooklyn:formatString("output { elasticsearch { host => %s protocol => \"http\" embedded => false } }", $brooklyn:config("logstash.elasticsearch.host"))
+        logstash.config.output: $brooklyn:formatString("output { elasticsearch { host => \"%s\" protocol => \"http\" embedded => false } }", $brooklyn:config("logstash.elasticsearch.host"))
