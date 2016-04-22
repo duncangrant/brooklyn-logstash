@@ -1,6 +1,11 @@
 brooklyn.catalog:
   version: 1.5.5
   iconUrl: http://logstash.net/images/logstash.png
+  publish:
+    description: Pure Brooklyn YAML blueprint to deploy a Logstash instance from the sources
+    license_code: Apache-2.0
+    overview: README.md
+    reference: catalog/reference.json
   items:
   - id: logstash-standalone
     name: "Logstash server"
